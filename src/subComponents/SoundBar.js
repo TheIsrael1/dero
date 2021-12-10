@@ -62,7 +62,7 @@ height: .8rem;
 const SoundBar = () => {
 
     const ref = useRef(null);
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(true);
 
     const handleClick = () => {
         setClick(!click);

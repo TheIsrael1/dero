@@ -165,6 +165,12 @@ const Main = () => {
 
     const handleClick = () => setClick(!click);
 
+    window.addEventListener("load",function() {
+        setTimeout(function(){
+            window.scrollTo(0, 1);
+        }, 0);
+    });
+
     return (
         <MainContainer>
          <DarkDiv click={click}/>

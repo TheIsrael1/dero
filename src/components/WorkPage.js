@@ -67,7 +67,11 @@ const WorkPage = () => {
     const ref = useRef(null);
     const yinyang = useRef(null);
 
-
+    window.addEventListener("load",function() {
+      setTimeout(function(){
+          window.scrollTo(0, 1);
+      }, 0);
+  });
 
     useEffect(() => {
         let element = ref.current;
