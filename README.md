@@ -1,26 +1,13 @@
-# Build a Stunning Portfolio with React JS using Styled-Components and framer-motion for awesome Animations
+# Personal Portfolio 💸
+my personal portfolio forked from [codebucks](https://github.com/codebucks27/react-portfolio-final) with personal additions
 
-This repository contains Final code for The Portfolio Website in ReactJS. <br />
-
-View Demo👇: <br />
-https://react-portfolio-sigma.vercel.app/ <br />
-
-If you want to learn how to create it please follow below tutorial👇: <br />
-
-https://youtu.be/jcohAIaSy2M <br />
-
-⚠⚠⚠ If you want full code of this website then you can get it from here👇: <br />
-
-https://codebucks.gumroad.com/l/hsTPD <br />
-
-You'll get code files which contans code for responsive portfolio website with 
-all the animations showed in the demo. 
-Also, I have used React Lazy loading to increase loading speed.
+## Stack
+React, styled components, framer motion e.t.c.
+## Live link [dero](https://dero.netlify.app).
 
 ### Images of The Portfolio Website:
 ![HOME](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Home.png)
 ![Intro](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Intro.png)
-![Blog](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Blog.png)
 ![Home Mobile](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Home-Mobile.png)
 ![Intro Mobile](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Intro-Mobile.png)
 ![Intro Blog](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Blog-Mobile.png)
