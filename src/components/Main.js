@@ -19,8 +19,8 @@ overflow:hidden;
 position: relative;
 
 h2,h3,h4,h5,h6{
-  font-family:'Karla', sans-serif ;
-  font-weight:500;
+font-family:'Karla', sans-serif ;
+font-weight:500;
 }
 `
 
@@ -44,6 +44,11 @@ right: calc(1rem + 2vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 z-index:1;
+
+@media (max-width: 768px) {
+color: ${props => props.click ? props.theme.body : props.theme.text};
+text-shadow: ${props => props.click? "1px 1px 2px black, 0 0 25px black, 0 0 5px black" : "none"};
+}
 `
 const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
@@ -54,6 +59,11 @@ left: calc(1rem + 2vw);
 transform: translate(-50%, -50%) rotate(-90deg) ;
 text-decoration: none;
 z-index:1;
+
+@media (max-width: 768px) {
+    text-shadow: ${props => props.click? "1px 1px 2px black, 0 0 25px black, 0 0 5px black" : "none"};
+    top: 49%;
+}
 `
 
 const BottomBar = styled.div`
@@ -71,11 +81,22 @@ const ABOUT = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 z-index:1;
+
+@media (max-width: 768px) {
+    color: ${props => props.theme.text};
+    font-size: .8rem;
+    
+}
+
 `
 const SKILLS = styled(NavLink)`
 color: ${props => props.theme.text};
 text-decoration: none;
 z-index:1;
+
+@media (max-width: 768px) {
+    font-size: .8rem;   
+}
 `
 
 const rotate = keyframes`
@@ -85,6 +106,7 @@ from{
 to{
     transform: rotate(360deg);
 }
+
 `
 
 const Center = styled.button`
@@ -111,18 +133,29 @@ transition: all 1s ease;
     display: ${props => props.click ? 'none' :'inline-block'  };
     padding-top: 1rem;
 }
+
+@media (max-width: 768px) {
+top: ${props => props.click ? '85%' :'50%'  };
+left: ${props => props.click ? '50%' :'50%'  };
+}
 `
 
 const DarkDiv = styled.div`
 position: absolute;
 top: 0;
-background-color: #000;
+background-color: ${props => props.click ? "#000" : props.theme.body};
 bottom: 0;
 right: 50%;
 width: ${props => props.click ? '50%' : '0%'};
 height: ${props => props.click ? '100%' : '0%'};
-z-index:1;
+// z-index:1;
 transition: height 0.5s ease, width 1s ease 0.5s;
+
+@media (max-width: 768px) {
+width: 100%;
+height: 50%;
+right: 0;
+}
 `
 
 
@@ -134,18 +167,18 @@ const Main = () => {
 
     return (
         <MainContainer>
-         <DarkDiv   click={click}/>
+         <DarkDiv click={click}/>
             <Container>
             <PowerButton />
             <LogoComponent theme={click ? 'dark' :'light'}/>
             <SocialIcons theme={click ? 'dark' :'light'} />
            
             <Center click={click}>
-                <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span>click here</span>
+                <YinYang  onClick={()=> handleClick()} width={click ? 80 : 200} height={click ? 100 : 200} fill='currentColor' />
+                <span>click Me</span>
             </Center>
 
-            <Contact target="_blank" to={{pathname:"mailto:codebucks27@gmail.com"}}>
+            <Contact target="_blank" to={{pathname:"mailto:ehindero2016@gmail.com"}}>
                 <motion.h2
                 initial={{
                     y:-200,
@@ -162,7 +195,7 @@ const Main = () => {
                     Say hi..
                 </motion.h2>
             </Contact>
-            <BLOG to="/blog">
+            <BLOG click={+click} to="/junk">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -175,7 +208,7 @@ const Main = () => {
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    Blog
+                    Junk
                 </motion.h2>
             </BLOG>
             <WORK to="/work" click={+click}>
@@ -208,7 +241,7 @@ const Main = () => {
                  whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    About.
+                    About Me.
                 </motion.h2>
             </ABOUT>
             <SKILLS to="/skills">

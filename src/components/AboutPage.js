@@ -46,13 +46,19 @@ const Main =  styled.div`
   justify-content: center;
   align-items: center;
   font-size: calc(0.6rem + 1vw);
- backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   
   position: absolute;
   left: calc(5rem + 5vw);
   top: 10rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
+
+  @media (max-width: 768px) {
+    left: unset;
+    margin: 0 auto;
+    position: relative;
+}
 `
 
 
@@ -72,11 +78,11 @@ const AboutPage = () => {
             <img src={astronaut} alt="spaceman" />
         </Spaceman>    
         <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+        I'm a front-end developer located in Nigeria. I love to create simple yet beautiful websites with great user experience.
+        <br /> <br/>
+        I'm interested in the whole frontend stack. I like to try new things and build great projects. I am a music person and I moslty code with jazz lofi. Currently experimenting with blockchain development.
+        <br/> <br/>
+        I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />

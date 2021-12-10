@@ -22,7 +22,7 @@ background-position: center;
 const Container = styled.div`
 background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`};
 width: 100%;
-height:auto;
+height: 100vh;
 
 position: relative;
 padding-bottom: 5rem;
@@ -39,6 +39,12 @@ const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
 grid-gap: calc(1rem + 2vw);
+z-index: 3;
+
+@media (max-width: 768px) {
+grid-template-columns: repeat(1, minmax(auto,  1fr));
+
+}
 `
 
 // Framer-motion config
@@ -91,7 +97,7 @@ const BlogPage = () => {
 </Grid>
 
 </Center>
-<BigTitle text="BLOG" top="5rem" left="5rem" />
+<BigTitle text="JUNK" top="5rem" left="5rem" />
             </Container>
         </MainContainer>
     )

@@ -7,7 +7,7 @@ import { Design, Develope} from './AllSvgs';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
-import ParticleComponent from '../subComponents/ParticleComponent';
+// import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 
 const Box = styled.div`
@@ -16,9 +16,14 @@ width: 100vw;
 height:100vh;
 position: relative;
 display: flex;
-justify-content: space-evenly;
+justify-content: center;
 align-items: center;
 
+@media (max-width: 768px) {
+flex-direction: column;
+height: 100vh;
+// padding-top: 5rem;
+}
 
 `
 
@@ -26,9 +31,9 @@ const Main = styled.div`
 border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
 background-color: ${props => props.theme.body};
-padding: 2rem;
+padding: 1rem;
 width: 30vw;
-height: 60vh;
+height: 70vh;
 z-index:3;
 line-height: 1.5;
 cursor: pointer;
@@ -41,6 +46,13 @@ justify-content: space-between;
 &:hover{
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
+}
+
+@media (max-width: 768px) {
+    width: 53vw;
+    height: auto;
+    z-index: 0;
+
 }
 `
 
@@ -63,7 +75,7 @@ margin-right: 1rem;
 
 const Description = styled.div`
 color: ${props => props.theme.text};
-font-size: calc(0.6em + 1vw);
+font-size: calc(0.7em + 1vw);
 padding: 0.5rem 0;
 
 
@@ -85,62 +97,33 @@ ul,p{
 const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-<Box>
+        <Box>
 
-<LogoComponent theme='light'/>
-<SocialIcons theme='light'/>
-<PowerButton />
-<ParticleComponent theme='light' />
+            <LogoComponent theme='light'/>
+            <SocialIcons theme='light'/>
+            <PowerButton />
+            {/* <ParticleComponent theme='light' /> */}
             <Main>
-<Title>
-    <Design width={40} height={40} /> Designer
-</Title>
-<Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
-</Description>
-<Description>
-<strong>I like to Design</strong>
-<ul>
-    <li>
-        Web Design
-    </li>
-    <li>
-        Mobile Apps
-    </li>
-</ul>
-</Description>
-<Description>
-<strong>Tools</strong>
-<ul>
-    <li>
-       Figma
-    </li>
-    
-</ul>
-</Description>
+                <Title>
+                    <Develope width={40} height={40} /> Frontend Developer
+                </Title>
+                <Description>
+                I love to contribute to projects. I'm actively contributing to some and also learning new stuff on the go.
+                </Description>
+                <Description>
+                <strong>Skills</strong>
+                <p>
+                Html, Css, Js, React, Redux, Next.JS, Sass, Bootstrap, Tailwind, Typescript etc.
+                </p>
+                </Description>
+                <Description>
+                <strong>Tools</strong>
+                <p>
+                VScode, Github, Codepen etc.
+                </p>
+                </Description>
 
-            </Main>
-            <Main>
-<Title>
-    <Develope width={40} height={40} /> Frontend Developer
-</Title>
-<Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
-</Description>
-<Description>
-<strong>Skills</strong>
-<p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-</p>
-</Description>
-<Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Codepen etc.
-</p>
-</Description>
-
-            </Main>
+                </Main>
 
             <BigTitle text="SKILLS" top="80%" right="30%" />
 

@@ -21,6 +21,9 @@ z-index:3;
     margin: 0.5rem 0;
 }
 
+@media (max-width: 768px) {
+left: 1rem;
+
 `
 
 const Line = styled(motion.span)`
@@ -37,7 +40,7 @@ const SocialIcons = (props) => {
             animate={{scale:[0,1,1.5,1]}}
             transition={{type:'spring', duration:1, delay:1}}
             >
-                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://github.com/codebucks27"}}>
+                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://github.com/TheIsrael1"}}>
                     <Github width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
                 </NavLink>
             </motion.div>
@@ -46,7 +49,7 @@ const SocialIcons = (props) => {
             animate={{scale:[0,1,1.5,1]}}
             transition={{type:'spring', duration:1, delay:1.2}}
             >
-                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://twitter.com/code_bucks"}}>
+                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://twitter.com/devlikeIsrael"}}>
                     <Twitter width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
                 </NavLink>
             </motion.div>
@@ -55,7 +58,7 @@ const SocialIcons = (props) => {
             animate={{scale:[0,1,1.5,1]}}
             transition={{type:'spring', duration:1, delay:1.4}}
             >
-                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://facebook.com/codebucks27"}}>
+                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://www.facebook.com/profile.php?id=100013523586858"}}>
                     <Facebook width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
                 </NavLink>
             </motion.div>
@@ -64,9 +67,6 @@ const SocialIcons = (props) => {
             animate={{scale:[0,1,1.5,1]}}
             transition={{type:'spring', duration:1, delay:1.6}}
             >
-                <NavLink style={{color:'inherit'}}  target="_blank"   to={{pathname:"https://youtube.com"}}>
-                    <YouTube width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
-                </NavLink>
             </motion.div>
 
             <Line color={props.theme}
@@ -77,7 +77,7 @@ initial={
     }
 }
 animate={{
-    height: '8rem'
+    height: '3rem'
 }}
 transition={{
     type:'spring', duration:1, delay:0.8

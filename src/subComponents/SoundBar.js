@@ -26,6 +26,11 @@ z-index:10;
 &>*:nth-child(5){
     animation-delay: 0.8s;
 }
+
+@media (max-width: 768px) {
+    top: 2.8rem;
+    left: 6rem;
+}
 `
 
 const play = keyframes`
@@ -47,7 +52,11 @@ animation:${play} 1s ease infinite;
 animation-play-state: ${props => props.click ? "running" : "paused"};
 height: 1rem;
 width: 2px;
-margin:0 0.1rem
+margin:0 0.1rem;
+
+@media (max-width: 768px) {
+height: .8rem;
+}
 `
 
 const SoundBar = () => {

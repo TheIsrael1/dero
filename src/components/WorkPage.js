@@ -21,6 +21,9 @@ display: flex;
 align-items: center;
 
 
+@media (max-width: 768px) {
+height: 500vh;
+}
 `
 
 const Main = styled(motion.ul)`
@@ -29,8 +32,10 @@ top: 12rem;
 left:calc(10rem + 15vw);
 height: 40vh;
 display: flex;
-
 color:white;
+
+
+
 `
 const Rotate = styled.span`
 display:block;
@@ -41,7 +46,6 @@ width: 80px;
 height: 80px;
 z-index:1;
 `
-
 
 // Framer-motion Configuration
 const container = {
@@ -69,14 +73,12 @@ const WorkPage = () => {
         let element = ref.current;
        
         
-        const rotate = () => {
-         
+        const rotate = () => {    
          element.style.transform = `translateX(${-window.pageYOffset}px)`
-      
+         return yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`
          
-          return (yinyang.current.style.transform =
-            'rotate(' + -window.pageYOffset + 'deg)')
         }
+        // console.log(yinyang.current.style.transform);
     
         window.addEventListener('scroll', rotate)
         return () => {

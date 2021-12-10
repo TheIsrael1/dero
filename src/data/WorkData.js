@@ -3,61 +3,70 @@
 export const Work = [
     {
         id:1,
-        name:"Agency Landing Page",
-        description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-        tags:["react","gsap","styledComponents"],
+        name:"Connect NG",
+        description:"It is built on top of the React JS, with styledComponents and connects with a django backend.",
+        tags:["react","styledComponents", "api"],
         
-        demo:"https://agency-website-eta.vercel.app/",
-        github:"https://github.com/codebucks27/Agency-website"
+        demo:"https://connecttng.netlify.app/",
+        github:"https://github.com/TheIsrael1/connect_ng"
     },
     {
         id:2,
-        name:"Job listing website",
-        description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
-        tags:["react","sass"],
+        name:"Vidly",
+        description:"A movie rental website built in ReactJS. With searching and filtering functionalities.",
+        tags:["react","css", "api"],
         
-        demo:"http://react-job-listing-website.codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/react-job-listing-website"
+        demo:"https://shrouded-woodland-19016.herokuapp.com/",
+        github:"https://github.com/TheIsrael1/vidly"
         
     },
     {
         id:3,
-        name:"Dev.to Clone",
-        description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-        tags:["react","api","sass"],
+        name:"Dolla",
+        description:"A fintech startup landing page built using ReactJS. styled with styled components",
+        tags:["react","styled components"],
         
-        demo:"http://devto-clone-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/devto-clone"
+        demo:"https://quirky-kirch-7d987c.netlify.app/",
+        github:"https://github.com/TheIsrael1/dolla"
     },
     {
         id:4,
-        name:"Sidebar Menu",
-        description:"A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
+        name:"Tacsfon UI",
+        description:"A student fellowship website built with react JS and styled Components",
         tags:["react","styledComponents","react-router"],
         
-        demo:"https://react-sidebar.vercel.app/",
-        github:"https://github.com/codebucks27/react-sidebar"
+        demo:"https://tacsfonui.netlify.app/",
+        github:"https://github.com/TheIsrael1/Tacsfon"
        
     },{
         id:5,
-        name:"Todo App(React + Redux)",
-        description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags:["react","redux","framer-motion"],
+        name:"shopping assistant",
+        description:"Installable shopping app, built with html, css and javascript logic",
+        tags:["html","css","Javascript"],
         
-        demo:"http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-Redux-Todo-App"
+        demo:"https://teamnewdev.github.io/ei-shopping-app",
+        github:"https://github.com/teamNewDev/ei-shopping-app/edit/master/README.md"
         
     },
     {
         id:6,
-        name:"Responsive Navigation Menu",
-        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-        tags:["react","react-router","css"],
+        name:"Zuri Chat",
+        description:"A online workspace app for companies and organisations",
+        tags:["react","Single SPA","css modules"],
         
-        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-responsive-navbar"
+        demo:"https://www.zuri.chat/",
+        github:"https://github.com/zurichat/zc_main"
         
     },
-    
+    {
+        id:7,
+        name:"React counter",
+        description:"Basic React counter app with react hooks",
+        tags:["react","react hooks","bootstrap"],
+        
+        demo:"https://counterprojectreact.netlify.app/",
+        github:"https://github.com/TheIsrael1/react-counter-project"
+        
+    }
   
 ] 

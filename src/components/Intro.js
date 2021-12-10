@@ -17,21 +17,45 @@ height:55vh;
 display: flex;
 
 
-background: linear-gradient(
-    to right,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%) bottom,
-    linear-gradient(
-    to right,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%) top;
-    background-repeat: no-repeat;
+background: 
+linear-gradient(
+to right,
+${props => props.theme.body} 50%,
+${props => props.theme.text} 50%) bottom,
+linear-gradient(
+to right,
+${props => props.theme.body} 50%,
+${props => props.theme.text} 50%) top;
+background-repeat: no-repeat;
 background-size: 100% 2px;
-    border-left: 2px solid ${props => props.theme.body};
-    border-right: 2px solid ${props => props.theme.text};
+border-left: 2px solid ${props => props.theme.body};
+border-right: 2px solid ${props => props.theme.text};
+z-index:1;
 
 
-    z-index:1;
+@media (max-width: 768px) {
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+
+background: none;
+border: none;
+border-top: 2px solid ${props => props.theme.body};
+border-bottom: 2px solid ${props => props.theme.text};
+
+background: 
+linear-gradient(
+to bottom,
+${props => props.theme.body} 50%,
+${props => props.theme.text} 50%) right,
+linear-gradient(
+to bottom,
+${props => props.theme.body} 50%,
+${props => props.theme.text} 50%) left;
+background-repeat: no-repeat;
+background-size: 2px 100%;
+}
+
 
 `
 const SubBox = styled.div`
@@ -43,9 +67,17 @@ display: flex;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,0%);
+    transform: translate(-50%, 0%);
     width: 100%;
     height: auto;
+    
+    @media (max-width: 769px) {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+width: 100%;
 }
 `
 
@@ -63,10 +95,12 @@ justify-content: space-evenly;
     color: ${props => `rgba(${props.theme.bodyRgba},0.6)` };
     font-size: calc(0.5rem + 1.5vw);
     font-weight:300;
+}
+@media (max-width: 768px) {
+    padding: .5rem 2rem;
+    justify-content: space-between;
 
 }
-
-
 
 `
 
@@ -80,15 +114,15 @@ const Intro = () => {
             <SubBox>
                 <Text>
                     <h1>Hi,</h1>
-                    <h3>I'm CodeBucks.</h3>
+                    <h3>Dero here</h3>
                     <h6>I design and Code simple yet beautiful websites.</h6>
                 </Text>
             </SubBox>
             <SubBox>
                 <motion.div
                 initial={{opacity:0}}
-        animate={{opacity: 1}}
-        transition={{ duration:1, delay:2 }}
+                animate={{opacity: 1}}
+                transition={{ duration:1, delay:2 }}
                 >
                     <img className="pic" src={Me} alt="Profile Pic" />
                 </motion.div>

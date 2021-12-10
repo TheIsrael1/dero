@@ -13,7 +13,7 @@ background-color: ${props => props.theme.text};
 color:${props => props.theme.body};
 padding: 1.5rem 2rem;
 margin-right: 8rem;
-border-radius: 0 50px 0 50px;
+border-radius: 3px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -24,6 +24,11 @@ transition: all 0.2s ease;
 background-color: ${props => props.theme.body};
 color:${props => props.theme.text};
 border: 1px solid ${props => props.theme.text};
+
+}
+
+@media (max-width: 768px) {
+width: 14rem;
 
 }
 `
@@ -41,6 +46,7 @@ border-top: 2px solid ${props =>props.theme.body};
 padding-top: 0.5rem;
 display:flex;
 flex-wrap:wrap;
+font-weight: 700;
 ${Box}:hover &{
 border-top: 2px solid ${props =>props.theme.text};
 }
@@ -60,7 +66,7 @@ background-color: ${props =>props.theme.body};
 color: ${props =>props.theme.text};
 text-decoration: none;
 padding:0.5rem calc(2rem + 2vw);
-border-radius: 0 0 0 50px;
+border-radius: 2x;
 font-size:calc(1em + 0.5vw);
 
 ${Box}:hover &{
