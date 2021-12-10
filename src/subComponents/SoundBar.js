@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import music from "../assets/audio/u-said-it-v13-1167.mp3"
@@ -62,11 +62,14 @@ height: .8rem;
 const SoundBar = () => {
 
     const ref = useRef(null);
-    const [click, setClick] = useState(true);
+    const [click, setClick] = useState(false);
 
-    const handleClick = () => {
+    useEffect(() => {
+        ref.current.play()
+    },[])
+    
+    const handleClick = () => {    
         setClick(!click);
-
         if(!click){
             ref.current.play();
         }else{
@@ -80,9 +83,7 @@ const SoundBar = () => {
             <Line click={click}/>
             <Line click={click}/>
             <Line click={click}/>
-
-
-            <audio src={music} ref={ref}  loop />
+            <audio src={music} ref={ref} autoplay={false} loop />
         </Box>
     )
 }
