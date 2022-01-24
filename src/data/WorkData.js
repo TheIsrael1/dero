@@ -12,16 +12,26 @@ export const Work = [
     },
     {
         id:2,
-        name:"Vidly",
-        description:"A movie rental website built in ReactJS. With searching and filtering functionalities.",
-        tags:["react","css", "api"],
+        name:"FoodCo",
+        description:"In house pastries reporting app for Food Co",
+        tags:["react","styledComponents", "Context API", "REST API"],
         
-        demo:"https://shrouded-woodland-19016.herokuapp.com/",
-        github:"https://github.com/TheIsrael1/vidly"
+        demo:"https://tacsfonui.netlify.app/",
+        github:"https://github.com/TheIsrael1/Tacsfon"
         
     },
     {
         id:3,
+        name:"Tacsfon UI",
+        description:"A student fellowship website built with react JS and styled Components",
+        tags:["react","styledComponents","react-router"],
+        
+        demo:"https://tacsfonui.netlify.app/",
+        github:"https://github.com/TheIsrael1/Tacsfon"
+        
+    },
+    {
+        id:4,
         name:"Dolla",
         description:"A fintech startup landing page built using ReactJS. styled with styled components",
         tags:["react","styled components"],
@@ -30,42 +40,33 @@ export const Work = [
         github:"https://github.com/TheIsrael1/dolla"
     },
     {
-        id:4,
-        name:"Tacsfon UI",
-        description:"A student fellowship website built with react JS and styled Components",
-        tags:["react","styledComponents","react-router"],
+        id:5,
+        name:"Vidly",
+        description:"A movie rental website built in ReactJS. With searching and filtering functionalities.",
+        tags:["react","css", "api"],
         
-        demo:"https://tacsfonui.netlify.app/",
-        github:"https://github.com/TheIsrael1/Tacsfon"
+        demo:"https://shrouded-woodland-19016.herokuapp.com/",
+        github:"https://github.com/TheIsrael1/vidly"
+
        
     },{
-        id:5,
+        id:6,
         name:"shopping assistant",
         description:"Installable shopping app, built with html, css and javascript logic",
-        tags:["html","css","Javascript"],
+        tags:["html","css","Javascript", "PWA"],
         
         demo:"https://teamnewdev.github.io/ei-shopping-app",
         github:"https://github.com/teamNewDev/ei-shopping-app/edit/master/README.md"
         
     },
     {
-        id:6,
+        id:7,
         name:"Zuri Chat",
         description:"A online workspace app for companies and organisations",
         tags:["react","Single SPA","css modules"],
         
         demo:"https://www.zuri.chat/",
         github:"https://github.com/zurichat/zc_main"
-        
-    },
-    {
-        id:7,
-        name:"React counter",
-        description:"Basic React counter app with react hooks",
-        tags:["react","react hooks","bootstrap"],
-        
-        demo:"https://counterprojectreact.netlify.app/",
-        github:"https://github.com/TheIsrael1/react-counter-project"
         
     }
   
