@@ -16,8 +16,8 @@ export const Work = [
         description:"In house pastries reporting app for Food Co",
         tags:["react","styledComponents", "Context API", "REST API"],
         
-        demo:"https://tacsfonui.netlify.app/",
-        github:"https://github.com/TheIsrael1/Tacsfon"
+        demo:"https://foodcoreporting.netlify.app/",
+        github:"https://github.com/TheIsrael1/foodco"
         
     },
     {
